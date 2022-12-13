@@ -1,0 +1,391 @@
+<html>
+
+<head>
+
+  <title>AICTE</title>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+  <meta content="utf-8" http-equiv="encoding" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway:500&display=swap" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+
+  <!--Import Font Awesome Icon Font-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+  <!--Import materialize.css-->
+  <link rel="stylesheet" type="text/css" href="static/css/materialize.min.css" />
+
+  <!--Main css-->
+  <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+  <!-- styling of sliding images start here -->
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+    }
+
+    .mySlides {
+      display: none;
+      height: 100%;
+    }
+
+    .mySlides img {
+      height: 100vh;
+      vertical-align: middle;
+      width: 100vw;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      /* height: 100px; */
+      max-width: 1000px;
+      /* position: relative; */
+      /* margin: auto; */
+    }
+
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .text {
+        font-size: 11px
+      }
+    }
+
+    .dot {
+      z-index: 10;
+    }
+  </style>
+
+  <!-- end of sliding images  -->
+
+  <!-- owl carousel css of chatbot image slider  -->
+
+</head>
+
+<body>
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="./static/img/body.png">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="./static/img/body1.png">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="./static/img/body2.jpg">
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="./static/img/body3.jpg">
+    </div>
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="./static/img/body5.jpg">
+    </div>
+
+  </div>
+  <div class="slider-dots" style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+  <!-- <br> -->
+
+
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 5000); // Change image every 2 seconds
+    }
+  </script>
+
+  <!-- date and time -->
+
+
+
+  <!-- code of body images slider end here -->
+
+
+  <div class="container">
+    <!-- Modal for rendering the charts, declare this if you want to render charts, 
+         else you remove the modal -->
+    <div id="modal1" class="modal">
+      <canvas id="modal-chart"></canvas>
+    </div>
+
+    <!--chatbot widget -->
+    <div class="widget">
+
+
+      <!-- refresh maped with clear -->
+      <!-- <button id="restartBtn"></button> -->
+
+
+
+
+
+      <!-- mnimize(w-s arrow) maped with close -->
+      <!-- <button id="minimizeBtn"></button> -->
+
+      <!-- close  map with restart -->
+
+      <div class="chat_header">
+        <!--Add the name of the bot here -->
+        <span class="chat_header_title">AICTE</span>
+        <!-- <span class="dropdown-trigger" href="#" data-target="dropdown1">
+          <i class="material-icons">more_vert</i>
+
+        </span> -->
+
+        <div class="btn-container" >
+          <button id="muteBtn" onclick="toggleSound()"><img src="./static/img/sound.svg" id="sound-mute" alt="" ></button>
+          <button id="clear" ><img src="./static/img/refresh.svg" alt=""></button>
+          <button id="restart"><img src="./static/img/cross.svg" alt="" ></button>
+          <button id="close" ><img src="./static/img/arrow.svg" alt="" ></button>
+        </div>
+
+        <!-- Dropdown menu-->
+        <!-- <ul id="dropdown1" class="dropdown-content">
+          <li><a href="#" id="clear">Clear</a></li>
+          <li><a href="#" id="restart">Restart</a></li>
+          <li><a href="#" id="close">Close</a></li>
+        </ul> -->
+      </div>
+      <!-- make div of sliding photo of chatbot -->
+
+      <div class="owl-carousel owl-theme">
+        <div class="item"><img src="./static/img/body.png" alt="" height="100%"></div>
+        <div class="item"><img src="./static/img/body1.png" alt="" height="100%"></div>
+        <div class="item"><img src="./static/img/body2.jpg" alt="" height="100%"></div>
+        <div class="item"><img src="./static/img/body3.jpg" alt="" height="100%"></div>
+        <div class="item"><img src="./static/img/body4.jpg" alt="" height="100%"></div>
+      </div>
+      <div class="container">
+        &ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        <span id="time"></span>
+      </div>
+      <script>
+        setInterval(updateTime, 1000);
+
+        function updateTime() {
+          var today = new Date();
+
+          var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+
+          var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+          var dateTime = date + ' ' + time;
+
+          document.getElementById("time").innerHTML = dateTime;
+        }
+      </script>
+
+
+
+      <!-- java script of images slider  start here-->
+
+
+
+
+
+
+
+      <!-- java script of images slider  end here now -->
+
+
+
+
+
+      <!-- code of sliding images of chatbot end here -->
+
+
+
+
+      <!--Chatbot contents goes here -->
+      <div class="chats" id="chats">
+        <div class="clearfix"></div>
+
+      </div>
+
+      <!--keypad for user to type the message -->
+      <div class="keypad" style="border: 2px solid red;">
+
+        <textarea id="userInput" placeholder="Type Your doubt......" class="usrInput">
+        </textarea>
+
+        <div id="sendButton">
+          <i class="fa fa-paper-plane" aria-hidden="true"></i>
+        </div>
+        <div id="voiceButton">
+          <img id="imgResumeMicImg" onclick="lolRecord()" src="./static/img/mic.svg" alt="microphone" width="40px">
+        </div>
+
+      </div>
+    </div>
+
+    <!--bot profile-->
+    <div class="profile_div" id="profile_div">
+      <img class="imgProfile" src="static/img/botAvatar.png" />
+    </div>
+
+    <!-- Bot pop-up intro -->
+    <div class="tap-target" data-target="profile_div">
+      <div class="tap-target-content">
+        <h5 class="white-text">Hey there 👋</h5>
+        <p class="white-text">
+          Can I help you?
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="static/js/lib/materialize.min.js"></script>
+  <script src="static/js/lib/uuid.min.js"></script>
+  <!--Main Script -->
+  <script type="text/javascript" src="static/js/script.js"></script>
+
+  <!--Chart.js Script -->
+  <script type="text/javascript" src="static/js/lib/chart.min.js"></script>
+  <script type="text/javascript" src="static/js/record_voice.js"></script>
+  <script type="text/javascript" src="static/js/lib/showdown.min.js"></script>
+
+  <!-- owl carousel js script of chatbot image slider  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+  <script type="text/javascript">
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: false,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 3500,
+      responsive: {
+        0: {
+          items: 1
+        },
+        366: {
+          items: 1
+        },
+        500: {
+          items: 1
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

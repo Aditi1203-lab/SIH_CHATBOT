@@ -1,0 +1,38 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: action_store_faq
+  # - action: utter_please_rephrase
+- rule: Say 'I am a BOT. I am here to cater to your queries.' anytime the user asks
+  steps:
+  - intent: about_bot
+  - action: utter_about_bot
+- rule: Say 'okay' when user starts a conversation with intent `college_new_delhi
+  steps:
+  - intent: college_new_delhi
+  - action: action_list_delhi
+#contact form
+- rule: Activate form
+  steps:
+  - intent: contact_us
+  - action: contact_us_form
+  - active_loop: contact_us_form
+
+- rule: Submit form
+  condition:
+  - active_loop: contact_us_form
+  steps:
+  - action: contact_us_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_remember
+  - action: action_collect_details

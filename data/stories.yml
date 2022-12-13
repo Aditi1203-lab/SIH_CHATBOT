@@ -1,0 +1,857 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  # - action: utter_greet
+  - action: utter_starting_button
+- story: get yes ans
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: general_ans_yes
+  - action: utter_ans_yes
+  - action: utter_did_that_help
+  - intent: affirm
+  # - action: utter_buttons
+  - action: utter_faculty_add
+  # - action: action_enable
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: get no ans
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: general_ans_yes
+  - action: utter_ans_yes
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+# - story: is
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   # - intent: inquire_general_scholarship
+#   # - action: utter_inquire_general_scholarship
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_buttons
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+# - story: isisis
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   # - intent: inquire_general_scholarship
+#   # - action: utter_inquire_general_scholarship
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_buttons
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_fallback
+# - story: isno
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   # - intent: inquire_general_scholarship
+#   # - action: utter_inquire_general_scholarship
+#   - action: utter_did_that_help
+#   - checkpoint: check_asked_question
+#   - intent: deny
+#   - action: utter_goodbye
+# - story: duration about PG Scholarship
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: duration_pg_scholarship
+#   - action: utter_duration_pg_scholarship
+#   - action: utter_was_helpful
+#   - intent: affirm
+#   - action: utter_carry_on
+
+# - story: duration about PG Scholarship_deniel
+#   steps: 
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: duration_pg_scholarship
+#   - action: utter_duration_pg_scholarship
+#   - action: utter_was_helpful
+#   - intent: deny
+#   - action: utter_duration_link
+
+# - story: Eligibility about PG Scholarship
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: eligibility_pg_scholarship
+#   - action: utter_eligibility_pg_scholarship
+#   - action: utter_goodbye
+- story: ask_doc
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: documents_for_PG_scholarship
+  - action: utter_documents_for_PG_scholarship
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_but
+  - checkpoint: do_this
+# - story: doc_required
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: documents_for_PG_scholarship 
+#   - action: utter_documents_for_PG_scholarship
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_but
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+
+# - story: dec_required_no
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: documents_for_PG_scholarship 
+#   - action: utter_documents_for_PG_scholarship
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+- story: check
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: affiliated_colleges
+  - action: utter_select_state
+  - checkpoint: checking_
+
+- story: maha_College
+  steps:
+  - checkpoint: checking_
+  - intent: college_maharashtra
+  - action: action_resources_list_maha
+
+
+- story: delhi_College
+  steps:
+  - checkpoint: checking_
+  - intent: college_new_delhi
+  - action: action_list_delhi
+
+- story: tamil_college
+  steps:
+  - checkpoint: checking_
+  - intent: college_tamil_nadu
+  - action: action_list_tamil
+
+
+- story: delhi_College_1
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: college_new_delhi
+  - action: action_list_delhi
+
+- story: tamil_college_1
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: college_tamil_nadu
+  - action: action_list_tamil
+# - story: Greetings
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+- story: irrlevent
+  steps:
+  - intent: out_of_scope
+  - action: action_store_faq
+  # - action: utter_out_of_scope
+- story: get no ans
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: inquire_general_scholarship
+  - action: utter_inquire_general_scholarship
+  - action: utter_did_that_help
+  - intent: affirm
+  # - action: utter_inquire_PG_scholarship
+  # - action: utter_did_that_help
+  # - intent: affirm
+  - action: utter_buttons
+  - checkpoint: check_done
+  # - action: utter_was_helpful
+  # - intent: affirm
+  # - action: utter_carry_on
+
+# - story: is_helpful
+#   steps:
+#   - action: utter_was_helpful
+#   - intent: affirm
+#   - action: utter_carry_on
+
+
+
+- story: bot_challenge_chal
+  steps:
+  - intent: about_bot
+  - action: utter_about_bot
+
+- story: abts
+  steps:
+  - intent: about_scholarship
+  - action: utter_about_scholarship
+  # - action: utter_was_helpful
+  # - intent: affirm
+  # - action: utter_carry_on
+- story: inquire PG
+  steps:
+  - intent: inquire_PG_scholarship
+  - action: utter_inquire_PG_scholarship
+  # - checkpoint: check_pro_ask
+- story: duration_as_button
+  steps:
+  - checkpoint: check_pro_ask
+  - intent: duration_pg_scholarship
+  - action: utter_duration_pg_scholarship
+  - action: utter_was_helpful    #################################
+  - intent: affirm
+  - action: utter_carry_on
+
+- story: duration_as_button_no
+  steps:
+  - checkpoint: check_pro_ask
+  - intent: duration_pg_scholarship
+  - action: utter_duration_pg_scholarship
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+- story: duration
+  steps:
+  - checkpoint: check_done
+  - intent: duration_pg_scholarship
+  - action: utter_duration_pg_scholarship
+  # - checkpoint: check_done
+  # - action: utter_was_helpful
+  # - intent: affirm
+  # - action: utter_carry_on
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_ask_duration_button
+##########################################################################
+- story: ask_duration
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: duration_pg_scholarship
+  - action: utter_duration_pg_scholarship
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_ask_duration_button
+- story: ask_eligibility
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: eligibility_pg_scholarship
+  - action: utter_eligibility_pg_scholarship
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_eli_buttons
+  - checkpoint: check_done_eli
+- story: ask_eli_no
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: eligibility_pg_scholarship
+  - action: utter_eligibility_pg_scholarship
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+- story: duration_2
+  steps:
+  - intent: duration_pg_scholarship
+  - action: utter_duration_pg_scholarship
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+  # - checkpoint: check_contact
+- story: if_asked_out_of_scope
+  steps:
+  - intent: out_of_scope
+  - action: action_store_faq
+  # - action: utter_out_of_scope
+- story: contacting
+  steps:
+  # - checkpoint: check_contact
+  - intent: call_us
+  - action: utter_call_no
+
+- story: interactive story 1
+  steps:
+  - intent: contact_us
+  - action: contact_us_form
+  - active_loop: contact_us_form
+  - slot_was_set:
+    - requested_slot: name
+  - slot_was_set:
+    - name: Krish
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: number
+  - slot_was_set:
+    - number: 987654321
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: email
+  - slot_was_set:
+    - email: krish@gmail.com
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_remember
+  - action: action_collect_details
+- story: eligibility
+  steps:
+  - intent: eligibility_pg_scholarship
+  - action: utter_eligibility_pg_scholarship
+  - action: utter_was_helpful
+  - action: utter_yes_no
+  - intent: affirm
+  - action: utter_carry_on
+- story: eligibility_2
+  steps:
+  - intent: eligibility_pg_scholarship
+  - action: utter_eligibility_pg_scholarship
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+- story: Date crossed
+  steps:
+  - intent: after_date_of_admission
+  - action: utter_after_date_of_admission
+  - action: utter_was_helpful
+  - intent: affirm
+  - action: utter_carry_on
+- story: Date crossed_no
+  steps:
+  - intent: after_date_of_admission
+  - action: utter_after_date_of_admission
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+- story: Different category
+  steps:
+  - intent: sponsored_management_foreign_student
+  - action: utter_sponsored_management_foreign_student
+
+- story: Part time
+  steps:
+  - intent: part_time_course
+  - action: utter_part_time_course
+
+- story: Other scholarship
+  steps:
+  - intent: other_scholarship
+  - action: utter_other_scholarship
+
+- story: Procedure
+  steps:
+  - checkpoint: check_done_eli
+  - intent: procedure_for_PG_scholarship
+  - action: utter_procedure_for_PG_scholarship
+  - action: utter_was_helpful
+  - intent: affirm
+  - action: utter_carry_on
+
+- story: Procedure_dusri
+  steps:
+  - checkpoint: adhar_but
+  - intent: procedure_for_PG_scholarship
+  - action: utter_procedure_for_PG_scholarship
+  - action: utter_was_helpful
+  - intent: affirm
+  - action: utter_carry_on
+
+- story: Procedure_third
+  steps:
+  - checkpoint: adhar_but
+  - intent: procedure_for_PG_scholarship
+  - action: utter_procedure_for_PG_scholarship
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+- story: Date crossed
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: after_date_of_admission
+  - action: utter_after_date_of_admission
+  - action: utter_was_helpful
+  - intent: affirm
+  - action: utter_carry_on
+- story: Different category
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: sponsored_management_foreign_student
+  - action: utter_sponsored_management_foreign_student
+  - action: utter_was_helpful
+  - intent: affirm
+  - action: utter_carry_on
+- story: carousel1
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: IIITN
+  - action: action_carousels
+- story: Different category_no
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: sponsored_management_foreign_student
+  - action: utter_sponsored_management_foreign_student
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+- story: Data invisible_no
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: data_not_visible_on_PG_scholarship_portal
+  - action: utter_data_not_visible_on_PG_scholarship_portal
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+
+- story: Data invisible
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: data_not_visible_on_PG_scholarship_portal
+  - action: utter_data_not_visible_on_PG_scholarship_portal
+  # - action: utter_was_helpful
+  # - intent: affirm
+  # - action: utter_carry_on
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_data_button
+  - checkpoint: data_invi
+- story: Other scholarship
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: other_scholarship
+  - action: utter_other_scholarship
+  - action: utter_was_helpful
+  - intent: affirm
+  - action: utter_carry_on
+
+- story: Other scholarship_no
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: other_scholarship
+  - action: utter_other_scholarship
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+- story: Part time
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: part_time_course
+  - action: utter_part_time_course
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_part_time_button
+  - checkpoint: part_time_but
+- story: Part time_2
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: part_time_course
+  - action: utter_part_time_course
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+- story: Part time_no
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: part_time_course
+  - action: utter_part_time_course
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+- story: Date crossed_no
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: after_date_of_admission
+  - action: utter_after_date_of_admission
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+- story: procedure_ask
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: procedure_for_PG_scholarship
+  - action: utter_procedure_for_PG_scholarship
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_pro_buttons_ask
+  - checkpoint: check_pro_ask
+- story: eli_deny_check
+  steps:
+  - checkpoint: check_done_eli
+  - intent: procedure_for_PG_scholarship
+  - action: utter_procedure_for_PG_scholarship
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback  
+- story: Documents required
+  steps:
+  - checkpoint: check_done_eli
+  - intent: documents_for_PG_scholarship
+  - action: utter_documents_for_PG_scholarship
+  - action: utter_was_helpful
+  - intent: affirm
+  - action: utter_carry_on
+
+- story: documents_required_no
+  steps:
+  - checkpoint: check_done_eli
+  - intent: documents_for_PG_scholarship
+  - action: utter_documents_for_PG_scholarship
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+
+- story: Data invisible
+  steps:
+  - intent: data_not_visible_on_PG_scholarship_portal
+  - action: utter_data_not_visible_on_PG_scholarship_portal
+
+- story: Incorrect Data
+  steps:
+  - checkpoint: data_invi
+  - intent: correct_wrong_entries_on_form
+  - action: utter_correct_wrong_entries_on_form
+  - action: utter_was_helpful
+  - intent: affirm
+  - action: utter_carry_on
+- story: Incorrect Data_2
+  steps:
+  - checkpoint: data_invi
+  - intent: correct_wrong_entries_on_form
+  - action: utter_correct_wrong_entries_on_form
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+- story: Inaccessible portal
+  steps:
+  - checkpoint: data_invi
+  - intent: problem_in_accessing_portal
+  - action: utter_problem_in_accessing_portal
+  - action: utter_was_helpful
+  - intent: affirm
+  - action: utter_carry_on
+- story: Inaccessible portal_2
+  steps:
+  - checkpoint: data_invi
+  - intent: problem_in_accessing_portal
+  - action: utter_problem_in_accessing_portal
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+- story: Delay in Receipt_ask
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: delay_in_PG_receipt
+  - action: utter_delay_in_PG_receipt
+  - action: utter_was_helpful
+  - intent: affirm
+  - action: utter_carry_on
+- story: Second time_ask
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: second_time_PG_course
+  - action: utter_second_time_PG_course
+  - action: utter_was_helpful
+  - intent: affirm
+  - action: utter_carry_on
+- story: Rate Change_ask
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: change_rate_of_Pg_scholarship
+  - action: utter_change_rate_of_Pg_scholarship
+  - action: utter_was_helpful
+  - intent: affirm
+  - action: utter_carry_on
+- story: Midway course_ask
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: leaving_course_in_midway
+  - action: utter_leaving_course_in_midway
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+
+- story: Aadhar required_if
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: requirement_for_payment_through_aadhar
+  - action: utter_requirement_for_payment_through_aadhar
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_adhar_button
+  - checkpoint: adhar_but
+
+- story: Aadhar required_else
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: requirement_for_payment_through_aadhar
+  - action: utter_requirement_for_payment_through_aadhar
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+- story: Midway course_2
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: leaving_course_in_midway
+  - action: utter_leaving_course_in_midway
+  - action: utter_was_helpful
+  - intent: affirm
+  - action: utter_carry_on
+- story: Rate Change_no
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: change_rate_of_Pg_scholarship
+  - action: utter_change_rate_of_Pg_scholarship
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+- story: Second time_no
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: second_time_PG_course
+  - action: utter_second_time_PG_course
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+- story: Delay in Receipt_no
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: delay_in_PG_receipt
+  - action: utter_delay_in_PG_receipt
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+- story: Inaccessible portal_ask
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: problem_in_accessing_portal
+  - action: utter_problem_in_accessing_portal
+  - action: utter_was_helpful
+  - intent: affirm
+  - action: utter_carry_on
+
+- story: Inaccessible portal_no
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: problem_in_accessing_portal
+  - action: utter_problem_in_accessing_portal
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+- story: Incorrect Data_ask
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: correct_wrong_entries_on_form
+  - action: utter_correct_wrong_entries_on_form
+  - action: utter_was_helpful
+  - intent: affirm
+  - action: utter_carry_on
+
+- story: Incorrect Data_no
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: correct_wrong_entries_on_form
+  - action: utter_correct_wrong_entries_on_form
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+- story: Delay in Receipt
+  steps:
+  - intent: delay_in_PG_receipt
+  - action: utter_delay_in_PG_receipt
+
+- story: Condition Payment
+  steps:
+  - checkpoint: check_pro_ask
+  - intent: condition_for_payment_PG_Scholarship
+  - action: utter_condition_for_payment_PG_Scholarship
+  - action: utter_was_helpful
+  - intent: affirm
+  - action: utter_carry_on
+- story: condition_payment_no
+  steps:
+  - checkpoint: check_pro_ask
+  - intent: condition_for_payment_PG_Scholarship
+  - action: utter_condition_for_payment_PG_Scholarship
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback 
+- story: Second time
+  steps:
+  - checkpoint: part_time_but
+  - intent: second_time_PG_course
+  - action: utter_second_time_PG_course
+  - action: utter_was_helpful
+  - intent: affirm
+  - action: utter_carry_on
+
+- story: Second time_2
+  steps:
+  - checkpoint: part_time_but
+  - intent: second_time_PG_course
+  - action: utter_second_time_PG_course
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+- story: Rate Change
+  steps:
+  - intent: change_rate_of_Pg_scholarship
+  - action: utter_change_rate_of_Pg_scholarship
+
+- story: Midway course
+  steps:
+  - checkpoint: part_time_but
+  - intent: leaving_course_in_midway
+  - action: utter_leaving_course_in_midway
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+- story: Midway course_2
+  steps:
+  - checkpoint: part_time_but
+  - intent: leaving_course_in_midway
+  - action: utter_leaving_course_in_midway
+  - action: utter_was_helpful
+  - intent: affirm
+  - action: utter_carry_on
+- story: Procedure of applying
+  steps:
+  - intent: mode_procedure_of_payment
+  - action: utter_mode_procedure_of_payment
+
+- story: Method of payment
+  steps:
+  - intent: method_of_payment_for_PG_scholarship
+  - action: utter_method_of_payment_for_PG_scholarship
+
+- story: Aadhar for scholarship
+  steps:
+  - checkpoint: do_this
+  - intent: aadhar_for_PG_scholarship
+  - action: utter_aadhar_for_PG_scholarship
+  - action: utter_was_helpful
+  - intent: affirm
+  - action: utter_carry_on
+- story: Aadhar for scholarship_1
+  steps:
+  - checkpoint: do_this
+  - intent: aadhar_for_PG_scholarship
+  - action: utter_aadhar_for_PG_scholarship
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+# - story: Aadhar required
+#   steps:
+#   - intent: requirement_for_payment_through_aadhar
+#   - action: utter_requirement_for_payment_through_aadhar
+- story: is_aaadhar_required
+  steps:
+  - intent: aadhar_for_PG_scholarship
+  - action: utter_aadhar_for_PG_scholarship
+- story: Aadhar status
+  steps:
+
+  # - intent: greet
+  # - action: utter_greet
+  - intent: check_aadhar_active_status
+  - action: utter_check_aadhar_active_status
+  - action: utter_was_helpful
+  - intent: affirm
+  - action: utter_carry_on
+- story: Aadhar status_no
+  steps:
+  # - intent: greet
+  # - action: utter_greet
+  - intent: check_aadhar_active_status
+  - action: utter_check_aadhar_active_status
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback
+- story: Expected date of payment
+  steps:
+  - intent: expected_date_of_payment
+  - action: utter_expected_date_of_payment
+
+- story: Attendence
+  steps:
+  - checkpoint: adhar_but
+  - intent: date_of_attendence
+  - action: utter_date_of_attendence
+  - action: utter_was_helpful
+  - intent: affirm
+  - action: utter_carry_on
+- story: Attendence_2
+  steps:
+  - checkpoint: adhar_but
+  - intent: date_of_attendence
+  - action: utter_date_of_attendence
+  - action: utter_was_helpful
+  - intent: deny
+  - action: utter_fallback

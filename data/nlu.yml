@@ -1,0 +1,1135 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - what's up
+    - I want to ask a question
+    - hola
+    - hemlo
+    - hiiiiii
+    - heyyy
+    - yelo
+    - suno
+    - come here
+    - can you hear me
+    - cn u hear me
+    - can i hve a word with you
+- intent: goodbye
+  examples: |
+    - that was shit, you're not helping
+    - you can't help me
+    - you can't help me with what i need
+    - i guess you can't help me then
+    - ok i guess you can't help me
+    - that's not what i want
+    - ok, but that doesnt help me
+    - this is leading to nothing
+    - this conversation is not really helpful
+    - you cannot help me with what I want
+    - I think you cant help me
+    - hm i don't think you can do what i want
+    - stop
+    - stop go back
+    - do you get anything 
+    - and you call yourself bot company  pff
+    - and that's it 
+    - nothing else 
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - yws
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - why not
+    - y not
+    - sure
+    - yea
+    - all right
+    - alright
+    - certainly
+    - absolutely
+    - deefinitely
+    - yep
+    - okay
+    - completely
+    - fully
+    - surely
+    - good reply
+    - perfect
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - why do you want
+    - y do u wnt
+    - i will not give
+    - fuck off
+    - will not fill
+    - i don't want to give
+    - is it mandatory
+    - Is it neccesary
+    - I don't think it is required
+    - It is not neccesary
+    - i am not going to give this
+    - don't take this
+    - why you are asking this
+    - y r u askng
+    - i don't trust you 
+
+# - intent: mood_great
+#   examples: |
+#     - perfect
+#     - great
+#     - amazing
+#     - feeling like a king
+#     - wonderful
+#     - I am feeling very good
+#     - I am great
+#     - I am amazing
+#     - I am going to save the world
+#     - super stoked
+#     - extremely good
+#     - so so perfect
+#     - so good
+#     - so perfect
+
+# - intent: mood_unhappy
+#   examples: |
+#     - my day was horrible
+#     - I am sad
+#     - I don't feel very well
+#     - I am disappointed
+#     - super sad
+#     - I'm so sad
+#     - sad
+#     - very sad
+#     - unhappy
+#     - not good
+#     - not very good
+#     - extremly sad
+#     - so saad
+#     - so sad
+- intent: inquire_general_scholarship
+  examples: |
+    - Is there any scholarship for Gate/GPAT Qualified students 
+    - I am Gate Qualified, is there any scholarship for me 
+    - I am GPAT Qualified, is there any scholarship for me 
+    - I am pursuing Master's, is there any scholarship for me  
+    - Is there any scholarship for Gate/GPAT Qualified students
+    - is there any scholarship for post graduates
+    - I am Gate/Gpat Qualified is there any scholarship for me
+    - I am pursuing Master is there any scholarship for me
+    - I have passed Gate/Gpat exam is there any scholarship for me
+    - I am Gate/Gpat Qualified am I eligible for any scholarship
+    - I am pursuing Master am I eligible for any scholarship
+    - I am a post graduate student is there any scholorship for me
+    - I am a post graduate student am I eligible for any scholarship
+    - I am Gate/Gpat Qualified am I eligible for any scholarship
+    - I am Gate/Gpat Qualified is there any appropiate scholarship for me
+    - Is there any scholarship available for Gate/GPAT Qualified students
+    - For students who have passed the Gate or GPAT are there any scholarships for them
+    - Do students who have passed the Gate or GPAT qualify for any scholarships
+    - Are there any scholarships available to students who have passed the Gate or GPAT tests
+    - Any scholarships available to Gate/GPAT qualified students
+    - Is there any financial assistance available for Gate/GPAT qualified students
+    - What is pg scholarship for
+    - Who are the targets of pg scholarship
+    - Is there any financial aid available for Gate/GPAT qualified students
+- intent: inquire_general_scholarship_2
+  examples: |
+    - How to apply for scholarships
+    - Documents needed for scholarship
+- intent: about_scholarship
+  examples: |
+    - What is scholarship 
+    - What are benefits of scholarship
+    - What is pg scholarship
+- intent: inquire_PG_scholarship
+  examples: |
+    - Tell me something about Pg scholarship 
+    - Do you know something about Pg scholarship 
+    - What is objective of Pg scholarship 
+    - What is aim of Pg scholarship 
+
+- intent: duration_pg_scholarship
+  examples: |
+    - What is the duration of pg scholarship
+    - What is the duration of pg scholarship period
+    - What is period of pg scholarship
+    - How long can I get scholarship 
+    - Till what period will I get the Scholarship 
+    - For how many months can I get PG Scholarship 
+    - what is time period of pg scholarship
+    - What is the duration of pg scholarship period
+    - How long can I get pg scholarship
+    - Till what period will I get the pg Scholarship
+    - For how many months can I get PG Scholarship
+    - How long can I receive a PG Scholarship
+    - How long will my PG scholarship last
+    - How long can I receive PG funding
+    - How long will I be eligible for the pg scholarship
+    - How long will I receive the PG Scholarship
+    - What is the time span of pg scholarship
+    - What is the term of pg scholarship
+    - What is the tenure of pg scholarship
+    - For how many months am I eligible for pg scholarship
+    - For how long am I eligible for pg scholarship
+    - What is the period of pg scholarship
+    - What is the stretch of pg scholarship
+    - What is the time limit of pg scholarship
+    - How long may I receive financial support for PG
+    - How long am I eligible for PG funding
+    - How long will the scholarship last
+- intent: eligibility_pg_scholarship
+  examples: |
+    - What are the eligibility criteria for grant of PG Scholarship 
+    - Eligibility criteria for PG Scholarship 
+    - who is eligible for scholarship
+    - what qualifications are required to apply for scholarship
+    - people with what qualifications are eligible for scholarship
+    - How do I know if I am eligible for PG Scholarship 
+    - What is the eligibility condition for availing scholarship under the scheme 
+     - What are the eligibility criteria for grant of PG Scholarship
+    - Eligibility criteria for PG Scholarship
+    - How do I know if I am eligible for PG Scholarship
+    - What is the eligibility condition for availing scholarship under the scheme
+    - What are the eligibility requirements for receiving a PG Scholarship
+    - What qualifications must be met before receiving a PG scholarship
+    - What qualifications must be met before a PG scholarship can be awarded
+    - What are the requirements for PG Scholarship
+    - What are the conditions for PG Scholarship eligibility
+    - eligibility requirements for the PG Scholarship
+    - How can I tell if I qualify for the PG Scholarship
+    - How can I determine if I am qualified for the PG Scholarship
+    - How do I determine whether I qualify for the PG Scholarship
+    - How do I know if I am suitable for pg scholarship
+    - Am I competent to apply for pg scholarship
+    - Am I eligible for pg scholarship
+    - What are the desirability to apply for pg scholarship
+    - Is a pg scholarship available to me
+    - Is it possible for me to receive a pg scholarship
+    - Do I qualify for a PG scholarship
+- intent: after_date_of_admission 
+  examples: |
+    - Are the students qualifying GATE/GPAT exam after seeking admission in the course, eligible for grant of PG Scholarship 
+    - I have qualified GATE/GPAT after the date of admission am I still eligible 
+    - am i eligible for scholarship even if the date is crossed
+    - last date is crossed , am i still eligible
+    - last date has been passed can i still appy for scholarship
+    - Are the students qualifying GATE/GPAT exam after seeking admission in the course eligible for grant of PG Scholarship
+    - I have qualified GATE/GPAT after the date of admission am I still eligible
+    - I qualified for the GATE/GPAT beyond the admission date am I still eligible
+    - Can I apply for pg scholarship after the date of admission
+    - I passed the GATE or GPAT exam after the admissions deadline am I still eligible
+    - Do I still qualify for pg scholarship if I passed the GATE or GPAT after the admission date
+    - Are you still eligible if you passed the GATE or GPAT after the admissions deadline
+    - I passed the GATE or GPAT exam after the time span of admission for pg scholarship am I still eligible
+    - Can I apply for pg scholarship after the target date of admission
+    - Can I apply for a pg scholarship after the intended entrance date
+    - After the anticipated enrollment date can I apply for a pg scholarship
+    - Can I apply for a PG scholarship after the anticipated entrance date
+    - Can I apply for a postgraduate scholarship beyond the deadline
+    - Can I apply for a pg scholarship after the deadline
+    
+- intent: sponsored_management_foreign_student
+  examples: |
+    - Whether students from sponsored categories/Management quota/foreign students are eligible for grant of PG Scholarship 
+    - I am a foreign student am I eligible for PG Scholarship 
+    - I am from Management quota, am I eligible for PG Scholarship 
+    - I am from sponsored category am I eligible for PG Scholarship 
+    - Whether students from sponsored categories/Management quota/foreign students are eligible for grant of PG Scholarship
+    - I am a foreign student am I eligible for PG Scholarship
+    - I am from Management quota am I eligible for PG Scholarship
+    - I am from sponsored category am I eligible for PG Scholarship
+    - Am I qualified for a PG scholarship because I am from the Management Quota
+    - Am I qualified for a PG scholarship because I am from the sponsored category
+    - If I apply for a PG Scholarship will I qualify as I am from management quota
+    - If I apply for a PG Scholarship will I qualify as I am a foreign student
+    - If I apply for a PG Scholarship will I qualify as I am not a citizen of India
+    - I fall within the management quota/foreign quota/sponsored category am I qualified for a pg scholarship
+    - I belong to management quota/foreign quota/sponsored category am I qualified for a pg scholarship
+    - Am I qualified for a PG scholarship because I am from the Management Quota/sponsored category/foreign student
+    - Will I be eligible if I apply for a PG Scholarship since I fall under the management quota/sponsored categories/foreign students
+    - Will my management quota/foregin student/sponsored category status allow me to be considered for a PG Scholarship
+    - Will I be eligible for a PG Scholarship if I apply because I am from the management quota/sponsored categories/foreign student
+    - Will I be able to apply for a PG Scholarship if I am not an Indian citizen
+    - Will I be eligible for a PG scholarship if I apply considering that I am not an Indian citizen
+    - Can I apply for pg scholarship if I am from sponsored categories/Management quota/foreign students
+    - Can I apply for a pg scholarship if I fall under one of the sponsored categories/Management quota/foreign students
+    - Could I still apply for pg scholarship if I fall under sponsored categories/Management quota/foreign students
+    - Can foreign students apply for pg scholarship
+    - Can foreigners apply for pg scholarships
+    - Can international students apply for pg scholarships
+
+- intent: part_time_course
+  examples: |
+    - Whether the PG Scholarship is admissible to the GATE/GPAT qualified student admitted in part time courses 
+    - I do a part time course am I still eligible for PF Scholarship 
+    - I do a part time course am I still apply for PF Scholarship 
+    - Whether the PG Scholarship is admissible to the GATE/GPAT qualified student admitted in part time courses
+    - I do a part time course am I still eligible for Pg Scholarship
+    - I do a part time course can I still apply for Pg Scholarship
+    - Can I still apply for a Pg Scholarship if I take a part-time course
+    - Do I still qualify for a Pg Scholarship if I take a part-time course
+    - Even though I take a part-time course can I still apply for a PG scholarship
+    - Even though I take a part-time course am I still eligible for a PG scholarship
+    - I am admitted to a part time course am I still eligible for a pg scholarship
+    - I take a part-time course can I still apply for a PG scholarship
+    - Can I still get a Pg Scholarship if I take a part-time course
+    - Do I still qualify for a Pg Scholarship if I am admissible to a part-time course
+    - Can I still receive a Pg Scholarship if I only enrol in part-time courses
+    - can i apply for a course part-time
+
+- intent: other_scholarship
+  examples: |
+    - Whether a student who is recipient of Scholarship either through State Government or Central Government sponsored schemes is eligible for grant of PG scholarship  - If I receive some other scholarship, am I still eligible for PG Scholarship 
+    - I recieve state scholarship, can I still apply for PG scholarship 
+    - I recieve other scholarship, am I still eligible for PG Scholarship 
+    - Whether a student who is recipient of Scholarship either through State Government or Central Government sponsored schemes is eligible for grant of PG scholarship
+    - If I receive some other scholarship am I still eligible for PG Scholarship
+    - I recieve state scholarship can I still apply for PG scholarship
+    - I recieve other scholarship am I still eligible for PG Scholarship
+    - If I receive an additional scholarship am I still eligible for pg scholarship
+    - Can I still apply for pg scholarship if I receive some other state scholarship
+    - Can I still apply for pg scholarship if I receive some other central scholarship
+    - Am I still eligible for pg scholarship if I receive some other central/state scholarship
+    - I receive financial aid from other sources am I still qualified for the PG Scholarship
+    - I receive other scholarship Is it still possible for me to receive a PG Scholarship
+    - Even though I recieve some other scholarship can I still apply for a PG scholarship
+
+- intent: procedure_for_PG_scholarship
+  examples: |
+    - What is the procedure for applying online for grant of PG Scholarship through DBT 
+    - How can I apply for PG Scholarship 
+    - What is the procedure to apply online for PG Scholarship 
+    - What is the procedure of PG Scholarship 
+    - What is the process of PG Scholarship 
+    - What is the procedure for applying online for grant of PG Scholarship through DBT
+    - How can I apply for PG Scholarship
+    - What is the procedure to apply online for PG Scholarship
+    - What is the procedure of PG Scholarship
+    - What is the process to apply for PG Scholarship
+    - What is the PG Scholarship procedure
+    - What is the PG Scholarship application process
+    - How does the PG Scholarship process work
+    - How do you apply for a PG Scholarship
+    - What is the PG Scholarship application procedure
+    - What is the method to apply for pg scholarship
+    - What is the course of action to apply for pg scholarship
+    - What are the guidelines to apply for the pg scholarship
+    - What is the way to apply for pg scholarship
+    - What is the course to apply for pg scholarship
+    - Do you know how to apply for pg scholarship
+    - Tell me how I can apply for pg scholarship
+    - Please explain how I can submit an application for a pg scholarship
+    - How can I submit the form for pg scholarship
+    - Where to submit the form of pg scholarship
+    - Where to find the application form of pg scholarship
+- intent: thankfull
+  examples: |
+    - Ok thank you
+    - okay
+    - great
+    - that's better
+    - thanks
+    - cool
+    - alright
+    - that's fine
+    - done
+    - yep
+    - yeah good
+    - good
+    - see u then
+    - fine
+- intent: documents_for_PG_scholarship 
+  examples: |
+    - What are the document required to be uploaded by the student 
+    - what documents are needed for PG scholarship
+    - what documents are required for scholarship
+    - What document will I need to apply for Scholarship 
+    - What document will I need to upload for PG scholarship 
+    - What are the list of the documents that I need for PG Scholarship 
+    - What are the document required to be uploaded by the student
+    - what documents are needed for PG scholarship
+    - What document will I need to apply for Scholarship
+    - What document will I need to upload for PG scholarship
+    - What are the list of the documents that I need for PG Scholarship
+    - What papers are required for a pg scholarship
+    - What documents are required for a PG scholarship
+    - what paperwork is required to be done for a PG scholarship
+    - which papers are required for PG scholarship
+    - what documentation is required for a PG scholarship
+    - What are the credentials required for a pg scholarship
+    - Tell me what I have ti upload to get pg scholarship
+    - Do you know anything about the list of documents that are required to be uploaded for pg scholarship
+- intent: IIITN
+  examples: |
+    - Tell me something about IIIN 
+    - What is IIITN 
+- intent: data_not_visible_on_PG_scholarship_portal
+  examples: |
+    - The data on the portal is submitted for the purpose of grant of PG Scholarship but it is not visible on the portal. What can the reasons be thereof  
+    - Why submitted data is not visible on my portal 
+    - y can't I see my entered data 
+    - My entered data is not visible to me 
+    - I can not access my data , what to do
+    - i cannot view my data whats the problem
+    - The data on the portal is submitted for the purpose of grant of PG Scholarship but it is not visible on the portal. What can the reasons be thereof 
+    - Why submitted data is not visible on my portal
+    - y can't I see my entered data
+    - My entered data is not visible to me
+    - My entered information is hidden from me
+    - I cannot see the entered data
+    - I am unable to see the entered data
+    - I am unable to see the submitted data
+    - My entered information is not visible to me
+    - My entered info is not visible to me
+    - Why isn't submitted data available on my portal
+    - Why is submitted data not appearing on my portal
+    - y is the data I uploaded not accessible on my portal
+    - Why my information is invisible on the portal
+    - Can you tell me why my submitted data is invisible on the portal
+    - y is the data I entered not showing up on my portal
+- intent: correct_wrong_entries_on_form
+  examples: |
+    - What is the procedure for Editing/Deleting the data wrongly entered by the Student/Institute 
+    - What to do I entered wrong data while submitting form 
+    - What is the procedure to correct the wrong entries 
+    - I submitted form with wrong data, how can I correct it 
+    - What is the procedure for Editing/Deleting the data wrongly entered by the Student/Institute
+    - What to do I entered wrong data while submitting form
+    - What is the procedure to correct the wrong entries
+    - I submitted form with wrong data, how can I correct it
+    - What should I do if I submitted a form with incorrect data
+    - How do I proceed if I submitted a form with incorrect information
+    - how do i correct incorrect entries
+    - i wrote wrong entry what do i do
+    - What should I do if I submitted the erroneous data
+    - What should I do if I provided incorrect information while submitting the form
+    - What is the method for correcting incorrect entries
+    - What would be the process for correcting incorrect entries
+    - What is the process for correcting incorrect entries
+    - What steps are taken to fix incorrect entries
+    - How should incorrect entries be corrected
+    - How does one rectify incorrect entries
+    - Tell me what I should do to correct wrong data entered while submitting the form
+    - What steps are taken to remedy inaccurate entries
+    - How do I fix entries that are incorrect on pg scholarship form
+    - How do you fix entries that are incorrect
+    - Can you tell me how to deal with faulty information
+    - How to make changes in the record when error is made by a candidate
+
+- intent: problem_in_accessing_portal
+  examples: |
+    - Whom to contact in case of any difficulties in accessing the portal for submitting online application  
+    - I can't access the portal for submitting my information 
+    - What to do if I can't access my portal 
+    - Whom to contact in case of any difficulties in accessing the portal for submitting online application 
+    - I can't access the portal for submitting my information
+    - What to do if I can't access my portal
+    - Why the portal is inaccessible 
+    - I am unable to access the site to enter my information
+    - After providing my information I am unable to access the portal
+    - I submitted my information but I can't access the portal
+    - To whom should I tell about my problem of inaccessible portal
+    - Who should I contact regarding my issue with the inaccessible portal
+    - To whom should I address my issue with the inaccessible portal
+    - Who should I contact regarding my portal issue
+    - Whom should I contact for technical assistance
+    - Who should I notify about my inaccessible portal problem
+    - Who should I inform about my portal problem
+    - Information added is unavailble on the portal
+    - To whom should I communicate regarding the portal inaccessibility
+    - To whom should I report my portal issue
+    - Who should I alert about my portal issue
+- intent: delay_in_PG_receipt
+  examples: |
+    - What is the reason for long delay in receipt of PG Scholarship 
+    - Why is there delay in receipt of PG Scholarship 
+    - What is the reason for long delay in receipt of PG Scholarship
+    - Why is there delay in receipt of PG Scholarship
+    - y is the PG Scholarship taking so long to arrive
+    - Why has the PG Scholarship not yet arrived
+    - y has there been a delay in receiving the PG Scholarship
+    - Why is the PG Scholarship being delayed
+    - What caused the prolonged delay in receiving the PG Scholarship
+    - Why receiving the PG Scholarship taking so long
+
+- intent: condition_for_payment_PG_Scholarship
+#done
+  examples: |
+    - Is there any condition for payment of PG scholarship  
+    - payment details
+    - What are the conditions for the payment of scholarship 
+    - How will my scholarship be transferred to my account 
+    - Is scholarship transferred on monthly basis 
+    - Is PG scholarship granted on monthly basis 
+    - Is there any condition for payment of PG scholarship
+    - What are the conditions for the payment of scholarship
+    - How will my scholarship be transferred to my account
+    - Is scholarship transferred on monthly basis
+    - Is PG scholarship granted on monthly basis
+    - Is the PG scholarship awarded monthly
+    - Does the PG scholarship come with a monthly payment
+    - What requirements must be met before receiving a scholarship
+    - What prerequisites must be met in order to receive a pg scholarship
+    - What are the terms and conditions for receiving a pg scholarship
+    - What are the requirements for the payment of pg scholarship
+    - What are the necessities for the payment of pg scholarship
+
+- intent: second_time_PG_course
+  examples: |
+    - What are the conditions for undergoing PG course for the 2nd time  
+    - I am opting for PG course for second time am I eligible for this Scholarship 
+    - I am opting for PG course for second time am I admissible for PG Scholarship 
+    - What are the conditions for undergoing PG course for the 2nd time 
+    - What are the conditions for undergoing PG course for the second time 
+    - I am opting for PG course for second time am I eligible for this Scholarship
+    - What prerequisites must be met before enrolling in a PG course a second time
+    - What prerequisites must be met in order to take a PG course again
+    - Can I opt for pg scholarship again
+    - I am opting for PG course for 2nd time am I admissible for PG Scholarship
+    - Will I be eligible for pg scholarship again
+    - Am I eligible for pg scholarship for the second time
+    - Can I once again apply for pg scholarship
+    - Can you tell me if I can again apply for scholarship like I did last time
+    - Is the method for applying for the scholarship same as last time
+
+
+- intent: change_rate_of_Pg_scholarship
+  examples: |
+    - Who can change the rate of PG Scholarship 
+    - Who changes the rate of PG Scholarship 
+    - Who decides the rate of PG Scholarship 
+    - Is Ministry of Education involved in deciding the rate of PG Scholarship 
+    - Is Ministry of Human Resource Development involved in deciding the rate of PG Scholarship 
+    - Who can change the rate of PG Scholarship
+    - Who changes the rate of PG Scholarship
+    - Who decides the rate of PG Scholarship
+    - Is Ministry of Education involved in deciding the rate of PG Scholarship
+    - Is Ministry of Human Resource Development involved in deciding the rate of PG Scholarship
+    - Who has the authority to adjust the PG Scholarship rate
+    - Who is authorised to alter the PG Scholarship rate
+    - Can anybody change the rate of pg scholarship
+    - What is the rate of pg scholarship
+    - At what rate scholarship is accustomered to the students
+    - Are decisions on the amount of PG Scholarships made with input from the Ministry of Education
+    - Input for determing the rate of pg scholarship is given by
+    - Who has the decision making authority in deciding the amount of the pg scholarship
+- intent: leaving_course_in_midway
+  examples: |
+    - What action shall be taken against the students who leave the course in midway  
+    - Can I leave the course in midway and still enjoy the scholarship 
+    - What happens to scholarship if I leave the course in midway 
+    - Will I get scholarship if I leave my course in midway 
+    - What happens to scholarship if I leave the course without completing it 
+    - What action shall be taken against the students who leave the course in midway 
+    - Can I leave the course in midway and still avail the scholarship
+    - What happens to scholarship if I leave the course in midway
+    - Will I get scholarship if I leave my course in midway
+    - What happens to scholarship if I leave the course without completing it
+    - What will happen if I drop out of the course
+    - What punishments will be meted out to students who drop out of a course in the middle
+    - How will students who drop out of a course in the middle be dealt with
+    - Will my scholarship be terminated if I leave course in the middle
+    - Do I have to refund the scholarship if I leave the course in the midway
+    - If for some reason I have to drop out of course will I still be eligible for scholarship
+    - Do we have to return the scholarship back in any circumstances
+    - What will happen if I fail in any sebsequent year during the duration of my course
+    - When we have to return the scholarship
+
+- intent: mode_procedure_of_payment
+  examples: |
+    - What is the mode and procedure of payment of Scholarship 
+    - What is the mode of payment of Scholarship 
+    - What is the procedure of payment of Scholarship 
+    - how do i pay for scholarship
+    - what is method of payment of scholarship
+    - What is the mode and procedure of payment of Scholarship
+    - What are the terms and steps for receiving the payment 
+    - Where can I find the procedure for the payment of scholarship
+    - Where will I be notified for the payment of scholarship
+    - How will I receive notice that my scholarship has been paid
+    - Will I receive the further notice about the payment on the portal
+
+- intent: method_of_payment_for_PG_scholarship
+  examples: |
+    - What is the method for payment of PG Scholarship 
+    - How will I receive my scholarship 
+    - How will be the payment made for scholarship 
+    - What is the method for payment of PG Scholarship
+    - How will I receive my scholarship
+    - How will be the payment made for scholarship
+    - What procedure will be used to pay for the scholarship
+    - In what manner will the scholarship payment be made
+    - How will the scholarship payment be handled
+    - How is the financial aid transferred to the account
+    - How is the payment made into my account
+- intent: aadhar_for_PG_scholarship
+#done
+  examples: |
+    - is aadhar required for scholarship
+    - Whether Aadhar number is mandatory for receiving PG scholarship 
+    - Do I need Aadhar Number for receiving scholarship  
+    - Whether uploading of the data of Aadhaar card is mandatory 
+    - Is aadhar mandatory for receiving pg scholarship 
+    - Whether Aadhar number is mandatory for receiving PG scholarship
+    - Do I need Aadhar Number for receiving scholarship 
+    - Whether uploading of the data of Aadhaar card mandatory
+    - Is aadhar card mandatory for receiving pg scholarship
+    - Can I apply for pg scholarship without Aadhar Card
+    - Without an Aadhar Card am I still eligible to apply for pg scholarship
+    - Can I apply for scholarship with any Governmment id
+- intent: out_of_scope
+  examples: |
+    - I need to buy a car
+    - I want a glass of water
+    - I need to book a cab
+    - download a movie
+    - Display my 10th result
+    - can you dance
+    - can you tell me a story
+    - what is 4 +3 = 
+    - can you tell me do you love me 
+    - After registration I see that I have an available balance of 0.00000000. What does this balance represent 
+    - Are you ready 
+    - But you're an english site :(
+    - Can I ask you questions first 
+    - Can I die
+    - Can I get a hamburger 
+    - Can YouTube talk 
+    - Can you call me back  
+    - Can you give me your datacenter's password
+    - Can you give me your datacenter's password 
+    - Can you make sandwiches 
+    - Can you please send me an uber
+    - Do I have to accept 
+    - Do you know Kevin Pelton
+    - Find nearest pizzahut
+    - Have we met before 
+    - HomeBase is advertised as a community. Is there a way to interact with other members of the community 
+    - How long does it take to set up a Rasa bot 
+    - I already told you! I'm a shitmuncher
+    - I am User
+    - I am an opioid addic
+    - I am an opioid addict
+    - I am hungry
+    - I am trying to build one, and did some research before, but I have not do hand-on work yet
+    - I can barely see this white text on light gray background ...
+    - I changed my mind
+    - I have installed it
+    - I ned a GP in 94301
+    - I need a GP in 94301
+    - I need a girl friend!
+    - I need to eat cake
+    - I wan to buy a plane
+    - I wanna marry you
+    - I want a new laptop
+    - I want book a hotel
+    - I want french cuisine
+    - I want pizza
+    - I want to die
+    - I want to order pizza
+    - I want to use pipe
+    - I will check
+    - I'm a shitmuncher
+    - Is Rasa really smart 
+    - Is this Goal-Oriented Chatbot 
+    - Is today saturday 
+    - Mail me the guide
+    - Make me a sandwich
+    - NLW
+    - Nice name
+    - Now 
+    - Pizza bot
+    - Recharge
+    - SEL ME SOMETHING
+    - The Try it out is not working
+    - The weather is good
+    - Today
+    - Try it out broken
+    - What day is it today 
+    - What did you eat yesterday 
+    - What do you prefer 
+    - What is todays date
+    - What is your hobbies 
+    - What makes you better than a human 
+    - What's 1 + 1 
+    - What's do YouTube do
+    - What's your backend system 
+    - Where am I right now 
+    - Where am I 
+    - Who  
+    - Who are your customers
+    - Why don't you answer 
+    - y is my TRUST score set to 50 after I completed the registration process 
+    - Won't you ask me how I am 
+    - You'r blue.
+    - [Kristin](name), I want to marry you
+    - [german](language) 
+    - a tamed mouse will arrive at your doorstep in the next couple of days
+    - aRE YOU SINGLE
+    - again 
+    - alexa, order 5 tons of natrium chloride
+    - and make chicken noises into the phone
+    - are the newsletter worth the subscription 
+    - are u facebook
+    - are u, facebook 
+    - are you single 
+    - are you dev 
+    - are you russian 
+    - are you sick
+    - are you vegan
+    - better than you
+    - book a ticket
+    - but I just told you that :(
+    - but if rasa is open source y do you have a sales team
+    - buy one please
+    - buy groceries
+    - call me father
+    - can we keep chatting 
+    - can you book dinner
+    - can you cheer me up
+    - can you cook dinner
+    - can you give me a cup of coffee
+    - can you help me with the docs 
+    - can you help me with your docs
+    - can you help me with your docs 
+    - can you learn from our conversation 
+    - can you speak about politic  
+    - can you understand  
+    - cannot see
+    - chgfhgh
+    - chinese ok 
+    - colder
+    - common, just try
+    - connect to alexa
+    - cr
+    - custom service
+    - did i break you
+    - dinner
+    - do you believe in god 
+    - do you have a phone number 
+    - do you have your photo 
+    - do you know me
+    - do you know ras
+    - do you liek cheese 
+    - do you like football
+    - do you like movies
+    - do you sell vacuum robots 
+    - do you want to marry me 
+    - docs
+    - doctor
+    - everything
+    - example of a chatbot
+    - genocide
+    - get me a club mate
+    - give me a girl friend
+    - give me food
+    - go back
+    - google 
+    - great, I'd like to buy a house
+    - hang on let me find it
+    - have you ever seen Keith Reilly 
+    - help with Alma Abrams
+    - help with my life
+    - hey little mama let em whisper in your ear
+    - hey, I contacted you a couple of days ago but didn't get any response, any news 
+    - how
+    - how about NYC
+    - how are Alicia Jackson's cats doing 
+    - how are the kids
+    - how can i get them 
+    - how can i test this
+    - how come you say ok  
+    - how do you learn
+    - how good is Rasa
+    - how it compares to alexa
+    - how long have you been online 
+    - how long will the next version will launch 
+    - how many lines of codes
+    - how much is 10 + 89  
+    - how much is 10 + 89
+    - how to get rasa studio
+    - how to go to newyork  
+    - i am hungry
+    - i am hungry, what should i do 
+    - i am not a developer but need this for business
+    - i am qq
+    - i can't deal with your request
+    - i do not care how are you
+    - i hope you will be better
+    - i immediately need help with implementing the coolest bot you can imagine
+    - i m looking for job
+    - i told you already
+    - i wanna party
+    - i want a non dripping ice cream
+    - i want caffe
+    - i want food
+    - i want good flycam
+    - i want more of you in my life!
+    - i want pizza
+    - i want pizza!!
+    - i want to book a hotel
+    - i want to buy a roomba for my grandson
+    - i want to eat
+    - i want to find new friends
+    - i want to find out what you can build with rasa
+    - i want to fly
+    - i want to grab lunch
+    - i want to know current situtation in pakistan
+    - i want to order a pizza
+    - i want to see your happy customers
+    - i will tame a mouse for you
+    - is John Lewis still married to you
+    - is it a wasteland full of broken robot parts 
+    - is it allow to
+    - is rasa a studio 
+    - is rasa any good
+    - is that any of your business
+    - isn't the newsletter just spam 
+    - it's a pity
+    - i'm hungry
+    - license
+    - ljljl
+    - lunch
+    - lunch  
+    - machine learning
+    - mail me the steps
+    - mascot means 
+    - more
+    - mountain
+    - my name k
+    - no wait go back i want a dripping ice cream but a cone that catches it so you can drink the ice cream later
+    - offer me lunch
+    - oh my god, not again!
+    - oh wait i gave you my work email address can i change it 
+    - ok one then
+    - on wiche nlp based system are you build 
+    - only that 
+    - order good
+    - order pizza
+    - personal or work 
+    - pizza
+    - please help with my ice cream it's dripping
+    - please hjave lunchj
+    - please hurry, i have deadline in two weeks to deliver the bot it is for very big company
+    - please play music
+    - rasa topics
+    - really  you're so touchy 
+    - refresh
+    - region with no. of records
+    - remember my name
+    - search wikipedia
+    - shitmuncher
+    - show me a picture of a chicken
+    - silly bot
+    - sing me a song
+    - so, I'm helping right now to training you 
+    - some thing else
+    - someone call the police i think the bot died
+    - sorry, i cannot rephrase
+    - sudo make me a sandwich
+    - tell me about yourself
+    - tell me more about next best action
+    - that doesn't sound like a joke
+    - that link doesn't work!
+    - the one that is better than you
+    - tricked  ya
+    - turn off my stove
+    - umm
+    - wait a bit i am still reading
+    - what about wheather
+    - what are contextual AI assistants and how different are they from chatbots 
+    - wht are you doing now 
+    - what are your uses for universities
+    - what did you eat for lunch 
+    - wh do oyu think about siri 
+    - what do you think abou siri 
+    - wha do you think about Stanley Ramirez 
+    - what do you think of alexa
+    - waht does your soul feel my friend
+    - what doing
+    - what else 
+    - what films do you like
+    - what i do after cd starter-pack-rasa-stack 
+    - what is a discourse 
+    - what is a mascot
+    - wht is adlingo
+    - what is differance between bot and mascot 
+    - what is evolution  
+    - wht is google rcs
+    - what is machine learning
+    - what is nice 
+    - what is the capital of delhi
+    - what is the capital of india
+    - what is the current petrol price
+    - what is the day  
+    - what is the real use case where we can use this one
+    - what is your address 
+    - what is your purpose
+    - what lnu mean 
+    - what the latest news  
+    - what you ate today 
+    - what's 5 + 5
+    - what's a newsletter 
+    - what's gingerale
+    - what's your wife doing this weekend
+    - what 
+    - whats that
+    - whats the sign
+    - when is the next train is coming 
+    - where do i get install files for mac 
+    - where is Oslo 
+    - where is mexico 
+    - wheres the party 
+    - which city are you talking about 
+    - which email
+    - which email should i send to  
+    - which file is created first while developing chat bot
+    - which is the LNU asynchronism  
+    - which kind
+    - who are the engineers at rasa 
+    - who are they 
+    - who is [Sharon Zeches](name)
+    - who is the MD of samsung bangalore  
+    - who is the president of india  
+    - who is your favourite robot 
+    - who let the dog out
+    - who was hitler
+    - who will anser my email 
+    - who's Bill Gates 
+    - whta you think about gdpr 
+    - why do you need that 
+    - why its called rasa  
+    - will u kill me
+    - will u kill me 
+    - winter is already leaving
+    - with you recommend me 
+    - would you like some water
+    - yeah, my dog was drinking a couple of litres of water per day and tried drinking the swimming pool
+    - you already have that
+    - you can learn how to make a coffe
+    - you have children 
+    - you have job opening
+    - you lock sweety
+    - you should learn to count
+    - you will know it from the single red rose it carries between its teeth
+    - you're a woman
+    - I am learning python
+    - CALL THE POLICE
+    - tertyryutyi
+    - wsdrcftvgybhnj
+    - why sky is blue 
+    - what kind of bird are you 
+    - contextua
+    - contextual
+    - talk to me about voulette
+    - voulette voulette
+    - Do you have a demo 
+    - Cars
+    - please voulette
+    - Out of scope question.
+    - i need money
+    - no, i need cash, money! Do you have it  
+    - the beatles
+    - Hi i want to go palghar
+    - I want to go palghar
+    - your contry name
+    - you girl
+    - gsaf
+    - expert of rasa
+    - i want play ball
+    - flight catch up
+    - how do you like your coffee
+    - Can you get analytics on who I'm chatting with when I use Rasa
+    - coronavirus
+    - have you heard of corona 
+    - where do i type in commandy
+    - where to type in commands
+    - kiss me
+    - you have to
+    - what type of bot 
+    - sfasd
+    - asdkjasdhjkasd
+    - j  bhbhj
+    - eshdtjfjfyk
+    - drhdtjfjfyj
+    - sudo reboot
+    - asdfgasd
+    - asdfgasdas
+- intent: affiliated_colleges
+  examples: |
+    - Colleges affiliated with Aicte
+    - List of colleges affiliated by AICTE
+    - Colleges approved by AICTE
+    - Different state colleges affiliated by Aicte
+
+- intent: college_maharashtra
+  examples: |
+    - Colleges in Maharahtra affiliated with Aicte
+    - List of colleges in Maharashtra affiliated by AICTE
+    - Colleges approved by AICTE in Maharashtra 
+
+- intent: college_new_delhi
+  examples: |
+    - Colleges in New Delhi affiliated with Aicte
+    - List of colleges in New Delhi affiliated by AICTE
+    - Colleges approved by AICTE in New Delhi
+- intent: give_name
+  examples: |
+    - my name is [krish](name)
+    - [aditi](name)
+    - call me [ayush](name)
+    - people call me [arushi](name)
+    - [sandeep](name) is my name
+    - [shreyansh](name) is here
+    - i am [alok](name) 
+    - this is [amit](name)
+    - people knows me [raj](name)
+    - [aman](name) this side
+
+- intent: mobile_number
+  examples: |
+    - my number is [8209829808](number)
+    - [8209829808](number)
+    - [8209829808](number) is my number
+    - my mobile number is [8209829808](number)
+    - you can call me at [8209829808](number)
+    - you can reach me by [8209829808](number)
+    - [8209829808](number) is my personal number
+    - my contact is [8209829808](number)
+
+- intent: email_id
+  examples: |
+    - my email is [Krish@gmail.com](email)
+    - [Aditi@yahoo.com](email)
+    - [Ayush@abc.com](email) is my Email
+    - my email is [Sandeep@iiitn.ac.in](email)
+    - mail me at [abc@abc.com](email)
+    - you can reach at [example@example.com](email)
+- intent: contact_us
+  examples: |
+    - contact team
+    - how to contact you
+    - can you connect me with team
+    - connect with team
+    - provide support
+    - please connect me with someone from your team
+    - I need to talk to you
+- intent: call_us
+  examples: |
+    - How can I directly contact you
+    - How can I reach you out
+    - I want to know more
+    - I want to contact you
+    - What is your customer service number
+    - how to contact people of your company/firm
+- intent: college_tamil_nadu
+  examples: |
+    - Colleges in Tamil Nadu affiliated with Aicte
+    - List of colleges in Tamil Nadu affiliated by AICTE
+    - Colleges approved by AICTE in Tamil Nadu  
+- intent: requirement_for_payment_through_aadhar
+  examples: |
+    - Is there any other mandatory requirement for payment of Scholarship through Aadhar 
+    - What are the requirements for payment of Scholarship through Aadhar 
+    - is adhar required in payment procedure
+- intent: about_bot
+  examples: |
+    - tell me something about you
+    - i want to know you
+    - are you a bot
+    - are you a human
+    - am I talking to a bot
+    - am I talking to a human
+    - what should i call you
+    - what r u known by
+    - what do people call you
+    - how people addresses you
+    - what are you called by
+    - am I speaking to bot
+    - To whom am I chatting
+    - Who is talking to me
+    - Who is chatting with me
+    - With whom am I having this discussion
+    - Are you a robot
+    - who r u
+    - Is this an automatic response
+    - With whom am I conversing
+    - Am I conversing with human
+    - Am I conversing with bot
+    - Am I chatting to bot
+    - Am I chatting to human
+    - Whom am I conversing to
+    - I am conversing to
+    - I am chatting to
+    - I am talking to
+    - Who are you
+    - who r u
+    - what is your name
+    - What are you for
+    - how to you work
+    - what is your job
+    - Are you human
+    - What can you do
+    - what do you do
+- intent: check_aadhar_active_status
+  examples: |
+    - How to check the Aadhar Active status of bank account 
+    - I want to check Aadhar Active status of my account, how can I do it 
+    - Link to check the status of my Aadhar Active account 
+    - What is my adhar status
+
+- intent: expected_date_of_payment
+  examples: |
+    - When the scholarship is expected after the bank accounts is made ACTIVE 
+    - When will I receive my scholarship after my bank account is made active 
+
+- intent: date_of_attendence
+  examples: |
+    - Is there any last date for forwarding monthly attendance 
+    - What is last date to forward monthly attendance 
+    - Till when can I submit my attendance 
+    - What is last date to submit monthly attendance 

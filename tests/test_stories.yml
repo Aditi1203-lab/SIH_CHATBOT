@@ -1,0 +1,42 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: get yes ans
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      Is user Id field mandatory for 'Forgot Password' form
+    intent: general_ans_yes
+  - action: utter_ans_yes
+  - action: utter_did_that_help
+  - user: |
+      yes
+    intent: affirm
+  # - action: action_enable
+  - action: utter_button
+  - action: utter_did_that_help
+  - user: |
+      No
+    intent: deny
+  - action: utter_goodbye   
+
+- story: get no ans
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      Is user Id field mandatory for 'Forgot Password' form
+    intent: general_ans_yes
+  - action: utter_ans_yes
+  - action: utter_did_that_help
+  - user: |
+      No
+    intent: deny
+  - action: utter_goodbye   
+

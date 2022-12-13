@@ -1,0 +1,426 @@
+version: "3.1"
+# slots:
+#   content_type:
+#     type: text
+actions:
+  # - custom_fallback_action
+  - utter_yes_no
+  - utter_starting_button
+  - utter_ask_name
+  - utter_ask_number
+  - utter_ask_email
+  - utter_remember
+  - action_collect_details
+  - utter_about_bot
+  - action_carousels
+  - utter_data_button
+  - utter_part_time_button
+  - utter_pan_card
+  - utter_greet
+  - utter_ans_yes
+  - utter_faculty_add
+  - utter_ans_bot
+  - utter_did_that_help
+  - utter_buttons
+  # - action_enable
+  - utter_ask_duration_button
+  - utter_goodbye
+  - utter_inquire_general_scholarship
+  - utter_inquire_PG_scholarship
+  - utter_duration_pg_scholarship
+  - utter_eligibility_pg_scholarship
+  - utter_after_date_of_admission
+  - utter_sponsored_management_foreign_student
+  - utter_part_time_course
+  - utter_other_scholarship
+  - utter_procedure_for_PG_scholarship
+  - utter_documents_for_PG_scholarship
+  - utter_data_not_visible_on_PG_scholarship_portal
+  - utter_correct_wrong_entries_on_form
+  - utter_problem_in_accessing_portal
+  - utter_delay_in_PG_receipt
+  - utter_condition_for_payment_PG_Scholarship
+  - utter_second_time_PG_course
+  - utter_change_rate_of_Pg_scholarship
+  - utter_leaving_course_in_midway
+  - utter_mode_procedure_of_payment
+  - utter_method_of_payment_for_PG_scholarship
+  - utter_aadhar_for_PG_scholarship
+  - utter_requirement_for_payment_through_aadhar
+  - utter_check_aadhar_active_status
+  - utter_expected_date_of_payment
+  - utter_date_of_attendence
+  - utter_about_scholarship
+  - utter_eli_buttons
+  - utter_pro_buttons
+  - utter_pro_buttons_ask
+  # - utter_default
+  - utter_please_rephrase
+  - utter_out_of_scope
+  # - utter_also_check
+  - utter_select_state
+  - action_resources_list_maha
+  - action_list_delhi
+  - action_list_tamil
+  - utter_call_no
+  - action_store_faq
+  - action_live_chat
+entities:
+- name
+- number
+- email
+slots:
+  name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: name
+      conditions:
+      - active_loop: contact_us_form
+  number:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: number
+      conditions:
+      - active_loop: contact_us_form
+  email:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: email
+      conditions:
+      - active_loop: contact_us_form
+forms:
+  contact_us_form:
+    ignored_intents: 
+    - disturb
+    required_slots:
+    - name
+    - number
+    - email
+intents:
+  - contact_us
+  - affiliated_colleges
+  - college_maharashtra
+  - college_new_delhi
+  - college_tamil_nadu
+  - IIITN
+  - inquire_general_scholarship_2
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - general_ans_yes
+  - questions_faculty_add
+  - about_bot
+  - pan_card
+  - about_scholarship
+  - inquire_general_scholarship
+  - inquire_PG_scholarship
+  - duration_pg_scholarship
+  - eligibility_pg_scholarship
+  - after_date_of_admission
+  - sponsored_management_foreign_student
+  - part_time_course
+  - other_scholarship
+  - procedure_for_PG_scholarship
+  - documents_for_PG_scholarship
+  - data_not_visible_on_PG_scholarship_portal
+  - correct_wrong_entries_on_form
+  - problem_in_accessing_portal
+  - delay_in_PG_receipt
+  - condition_for_payment_PG_Scholarship
+  - second_time_PG_course
+  - change_rate_of_Pg_scholarship
+  - leaving_course_in_midway
+  - mode_procedure_of_payment
+  - method_of_payment_for_PG_scholarship
+  - aadhar_for_PG_scholarship
+  - requirement_for_payment_through_aadhar
+  - check_aadhar_active_status
+  - expected_date_of_payment
+  - date_of_attendence
+  - call_us
+  - give_name
+  - mobile_number
+  - email_id
+  - disturb
+responses:
+  utter_starting_button:
+  - text: "These are most frequently asked questions"
+    buttons:
+    - title: "AICTE"
+      payload: "/ca"
+    - title: "Duration"
+      payload: "/duration_pg_scholarship"
+    - title: "Eligibility"
+      payload: "/eligibility_pg_scholarship"
+    - title: "Scholarship"
+      payload: "/about_scholarship"
+    - title: "Other Scholarships"
+      payload: "/other_scholarship"
+    - title: "Procedure of Scholarship"
+      payload: "/procedure_for_PG_scholarship"
+    - title: "Documents Required"
+      payload: "/documents_for_PG_scholarship"
+    - title: "Payment"
+      payload: "/condition_for_payment_PG_Scholarship"
+    - title: "Aadhar"
+      payload: "/aadhar_for_PG_scholarship"
+  utter_give_assurance:
+  - text: Your details will be proccessed to contact only,so be assured.
+  utter_ask_name:
+  - text: What is your name?
+  utter_ask_number:
+  - text: What is your Phone number?
+  utter_ask_email:
+  - text: What is your Email id?
+  utter_remember:
+  - text: "Thanks. Our team will get back {name} at {number} or {email}\n"
+  # utter_also_check:
+  # - text: "Also check this link for area wise requirements: [COVID ARMY](https://covid.army/)"
+  # utter_default:
+  # - text: "Sorry , I can't handle that request."
+  utter_select_state:
+  - text: "Select the state about which you want to know"
+    buttons:
+    - title: "Maharashtra"
+      payload: "/college_maharashtra"
+    - title: "Delhi"
+      payload: "/college_new_delhi"
+    - title: "Tamil Nadu"
+      payload: "/college_tamil_nadu"
+
+  utter_please_rephrase:
+  - text: "Sorry , I can't handle that request."
+  utter_out_of_scope:
+  - text: "Sorry, I can't handle that request."
+  utter_data_button:
+  - text: "Do browse through these then"
+    buttons:
+    - title: "Correction of wrong entires"
+      payload: "/correct_wrong_entries_on_form"
+    - title: "Accessing portal"
+      paylaod: "/problem_in_accessing_portal"
+  utter_part_time_button:
+  - text: "Do browse through these then"
+    buttons:
+    - title: "Midway Course"
+      payload: "/leaving_course_in_midway"
+    - title: "Second Attepmt to PG course"
+      payload: "/second_time_PG_course"
+  utter_pro_buttons_ask:
+  - text: "Do browse through these then"
+    buttons:
+    - title: "Duration"
+      payload: "/duration_pg_scholarship"
+    - title: "Payment Procedure"
+      payload: "/condition_for_payment_PG_Scholarship"
+  utter_pro_buttons:
+  - text: "Do browse through these then"
+    buttons:
+    - title: "Duration"
+      payload: "/duration_pg_scholarship"
+    - title: "Requirements in payment"
+      payload: "/condition_for_payment_PG_Scholarship"
+  utter_duration_link:
+  - text: "In that case this might help you"
+    image: "https://www.aicte-india.org/schemes/students-development-schemes/PG-Scholarship-Scheme"
+  utter_carry_on:
+  - text: "Great!!Carry on"
+  utter_adhar_button:
+  - text: "Do browse through these then"
+    buttons:
+    - title: "Procedure"
+      payload: "/procedure_for_PG_scholarship"
+    - title: "Attendence"
+      payload: "/date_of_attendence"
+  utter_was_helpful:
+  - text: "Is this helpful?"
+  # utter_fallback:
+  # - text: "Please contact us directly to know more"
+  utter_fallback:
+  - text: "Please contact us directly to know more"
+    buttons:
+    - title: "Call Us"
+      payload: "/call_us"
+    - title: "Customer support"
+      payload: "/contact_us"
+  # utter_default:
+  # - text: "Sorry, I can't handle that request."
+  utter_call_no:
+  - text: "Helpline number 011-29581000 , 011-29581333"
+  utter_pan_card:
+  - text: "Please go through this link"
+    # link: "https://www.google.co.in/"
+  utter_greet:
+  - text: "Hey! How may I assist you?"
+  utter_ans_yes:
+  - text: "Yes"
+  utter_faculty_add:
+  - text: "This is what I found , hope this helps you"
+    image: "https://www.google.co.in/"
+  utter_ans_bot:
+  - text: "I am a BOT. I am here to cater to your queries."
+  utter_inquire_general_scholarship:
+  - text: "Yes we have a pg scholarship."
+  utter_inquire_general_scholarship_2:
+  - text: "Do refer this link"
+    image: "https://www.buddy4study.com/article/scholarship-form"
+  utter_about_sco:
+  - text: "1.Saves you from debt\n2.Improves performance\n3.Gives you a career advantage"
+  # utter_cheer_up:
+  # - text: "Here is something to cheer you up:"
+  #   image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_eli_buttons:
+  - text: "Do browse through these then"
+    buttons:
+    - title: "Procedure of scholarship"
+      payload: "/procedure_for_PG_scholarship"
+    - title: "Documents required"
+      payload: "/documents_for_PG_scholarship"
+  utter_ask_duration_button:
+  - text: "Do browse through these then"
+    buttons: 
+    - title: "Eligibility"
+      payload: "/eligibility_pg_scholarship"
+    - title: "Procedure"
+      payload: "/procedure_for_PG_scholarship"
+  utter_did_that_help:
+  - text: "Would you like to know more?"
+  utter_about_bot:
+  - text: "I am a BOT. I am here to cater to your queries."
+  utter_buttons:
+  - text: "Do browse through these then"
+    buttons:
+    - title: "Eligibility for PG scholarship"
+      # payload: "https://www.buddy4study.com/article/scholarship-form"
+      payload: "/eligibility_pg_scholarship"
+    - title: "Duration of PG scholarship"
+      payload: "/duration_pg_scholarship"
+  utter_but:
+  - text: "Do browse through these then"
+    buttons:
+    - title: "Adhar Card for scholarship"
+      payload: "/aadhar_for_PG_scholarship"
+    - title: "About PG scholarship"
+      payload: "/condition_for_payment_PG_Scholarship"
+  utter_happy:
+  - text: "Great, carry on!"
+  utter_goodbye:
+  - text: "Bye , See you later"
+  utter_inquire_PG_Scholarship:
+  - text: "PG Scholarship is awarded to full time GATE/GPAT qualified students 
+           admitted to M.E./ M. Tech/ M. Arch and M.Pharma courses in AICTE approved Institutions/Colleges @Rs. 12,400/- PM/ student."
+
+  utter_duration_pg_scholarship:
+  - text: "The Scholarship is tenable for 24 months or for the duration of the course i.e. 
+           from the date of commencement of classes till the date of completion of the classes whichever is lower and is not 
+           extendable under any circumstances. b) Students of final years of dual degree integrated programmes would also
+           be entitled to PG Scholarship from the 9th semester onwards in case they get a CGPA score of 8 or above (on a scale of 10 ) 
+           i.e. only for one year in final year."
+  utter_yes_no:
+  - text: "Select"
+    buttons: 
+    - title: "Yes"
+      payload: "/affirm"
+    - title: "No"
+      payload: "/deny"
+  utter_about_scholarship:
+  - text: 'Do visit https://www.buddy4study.com/scholarships'
+  utter_eligibility_pg_scholarship:
+  - text: "Post Graduate Scholarship is entitled only to those students:
+          i)	Having a valid GATE/ GPAT/CEED score at the time of admission.
+          ii)	Must be admitted as a full-time scholar. 
+          iii)Students of final years of dual degree integrated programmes would also be entitled to PG Scholarship from the 9th semester onwards in case they get a CGPA score of 8 or above (on a scale of 10 ) i.e. only for one year in final year.
+          iv)	Admitted in AICTE approved Institutions / University Departments & AICTE approved programs viz. Master of Engineering, Master of Technology, Master of Architecture, Master of Pharmacy and Master of Design. 
+          v)	Number of PG Scholarship is limited to the AICTE approved intake in the programme in that year."
+
+  utter_after_date_of_admission:
+  - text: "Any student who qualifies the GATE/GPAT exam after the date of admission shall not be 
+           eligible for grant of scholarship for the reasons whatsoever it may be."
+
+  utter_sponsored_management_foreign_student:
+  - text: "No, Students from non-sponsored categories/Management quota/foreign students admitted 
+           with valid GATE/GPAT Score card are not eligible for grant of PG Scholarship."
+
+  utter_part_time_course:
+  - text: "No, PG Scholarship is admissible to the GATE/GPAT qualified students, admitted only in full time course."
+
+  utter_other_scholarship:
+  - text: "No, the student who is in receipt of any kind of Scholarship/Stipend or salary etc. is not eligible for grant of PG Scholarship."
+
+  utter_procedure_for_PG_scholarship:
+  - text: "Proposal for grant of PG Scholarship is called for through advertisement in leading newspapers. Students/Institutes are advised to follow the procedure and guidelines contained therein. 
+           Copy of the advertisement can be viewed by visiting AICTE portal at http:www.aicte-india.org/bulletin.php"
+
+  utter_documents_for_PG_scholarship:
+  - text: "Students are required to upload to following documents: 
+            a) Scanned PDF copy of GATE/GPAT score card.
+            b) Scanned PDF copy of the passbook 
+            c) Scanned PDF copy of the Aadhaar card. Students of J&K, Meghalaya and Assam are exempted. 
+            d) Scanned PDF copy of caste certificate. 
+            e) Scanned PDF copy of the Non-Creamy Layer (NCL) certificate in respect of only OBC candidates. Non-Creamy Layer (NCL)
+            should not be old more than 1 year."
+
+  utter_data_not_visible_on_PG_scholarship_portal:
+  - text: "Every data/attendance uploaded by the student/Institution is required to be submitted by pressing “Submit Application” button. Check up with your Institution whether
+           “submit application” button has been pressed or not while submitting the data."
+
+  utter_correct_wrong_entries_on_form:
+  - text: "In case wrong data has been forwarded/entered on the portal, Student/Institute may lodge their grievance through e-mail supported with scanned copies of the documents with AICTE for resolving the issue. 
+           Help line number 011-29581000, 011-29581333 (for portal related technical issues)."
+
+  utter_problem_in_accessing_portal:
+  - text: "One can avail Helpdesk Service on e-mail ID pgscholarship@aicte-india.org, phone number 011-29581000 and for technical issues in the portal students/Institutions can make call on - 011-29581333 
+           (from 9.30 am to.5.30 pm) on all working days (Monday-Friday) for any queries."
+
+  utter_delay_in_PG_receipt:
+  - text: "The attendance/data submitted by the student/institute has to be processed at various levels. It consumes considerable time to release the PG Scholarship subject to availability of funds, leading to delays."
+  
+  utter_condition_for_payment_PG_Scholarship:
+  - text: "The Scholarship will be granted to the student on a monthly basis subject to the satisfactory academic performance and adherence to University/Institute norms/rules and regulations as applicable time to time, 
+           certified by the Head of the Institute and obligatory work as prescribed."
+
+  utter_second_time_PG_course:
+  - text: "PG Scholarship is not admissible to passed out students taking 2nd time admission on the basis of re-qualifying GATE/GPAT exam who have already availed the scholarship from AICTE or any other centrally 
+           funded institution like - IITs, NITs and IIITs etc."
+
+  utter_change_rate_of_Pg_scholarship:
+  - text: "The amount of PG Scholarship is subject to change as per the notification issued by Ministry of Human Resource Development (MHRD), New Delhi (now Ministry of Education) from time to time, with the 
+           approval of the Executive Committee of the Council."
+
+  utter_leaving_course_in_midway:
+  - text: "The student shall be required to give an undertaking to the effect that he/she would not leave the course midway. In case any student leaves the course in midway or failed/ drop out in subsequent year,
+           he/she will be required to refund the total PG Scholarship drawn at the time of leaving the course. For those scholars who left the course midway, the scholarship shall be stopped."
+  
+  utter_mode_procedure_of_payment:
+  - text: "The mode and procedure of payment of Scholarship to the students shall be governed by the policy decision of the AICTE as may be notified from time to time on its web-portal or through advertisement
+           in leading English/Hindi newspapers."
+
+  utter_method_of_payment_for_PG_scholarship:
+  - text: "PG scholarship is released through PFMS on Aadhar Bridge Payment System (ABPS). The requirements of bank details etc. are discarded with as details of Aadhar suffice the requirement for release of
+           scholarship on ABPS through PFMS."
+
+  utter_aadhar_for_PG_scholarship:
+  - text: "Aadhar number is mandatory for applying for PG scholarship. Applications will not be accepted without the Aadhar number of the candidate."
+  
+  utter_requirement_for_payment_through_aadhar:
+  - text: "The scholarship is credited in Aadhar “ACTIVE” bank account only."
+
+  utter_check_aadhar_active_status:
+  - text: "Student can check Aadhar Active status of the bank account by following the link displayed on website."
+
+  utter_expected_date_of_payment:
+  - text: "On receipt of Aadhar active bank account details, bank beneficiary code is generated in the next 15 days. On successful generation bank beneficiary code before 20th of a particular month, scholarship shall 
+           be released at the end of that month. Otherwise at the end of next month."
+
+  utter_date_of_attendence:
+  - text: "Attendance/ list of absentees are to be marked/ forwarded positively till 15th for disbursement by 30th of every month."
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
